@@ -1,17 +1,18 @@
 import streamlit as st
 import pandas as pd
 
-
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("style.css")        
+   
 
 # Page setup
 st.set_page_config(page_title="Stackly", page_icon=":books:", layout="wide", initial_sidebar_state="expanded")
 st.title("Stackly - Learn Smart, Stack Fast")
 
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("style.css")     
 # Connect to the Google Sheet
 sheet_id = '15ago01u5VzLpDuVJGcYG0cfflxKw9bVWoYphvrnFiUs'
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv"
