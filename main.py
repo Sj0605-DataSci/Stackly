@@ -22,7 +22,7 @@ df = pd.read_csv(url, dtype=str).fillna("None")
 # st.write(df)
 
 # Use a text_input to get the keywords to filter the dataframe
-text_search = st.text_input("Search videos by topics, course name, level or domain", value="")
+text_search = st.text_input("Search videos by topics, course name, level or domain (First letter Capital only )", value="")
 
 # Filter the dataframe using masks
 m1 = df["Course Name"].str.contains(text_search)
